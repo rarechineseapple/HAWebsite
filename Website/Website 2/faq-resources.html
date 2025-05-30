@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>No Sidebar - Landed by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            /* Style for FAQ Section */
+            #faq {
+                margin-top: 3em;
+            }
+
+            .faq-item {
+                margin-bottom: 1.5em;
+            }
+
+            .faq-question {
+                background-color: #16171e;
+                color: #fff;
+                padding: 1em;
+                width: 100%;
+                border: none;
+                text-align: left;
+                font-size: 1.2em;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+            .faq-question:hover {
+                background-color: #444;
+            }
+
+            .faq-answer {
+                display: none;
+                padding: 1em;
+                background-color: #16171e;
+                border-radius: 5px;
+                margin-top: 1em;
+            }
+
+            .faq-answer p {
+                margin: 0;
+            }
+
+            .faq-item.open .faq-answer {
+                display: block;
+            }
+
+            /* Change the icon on opening the FAQ */
+            .faq-item.open .faq-question .icon {
+                transform: rotate(45deg);
+            }
+
+
+            /* For better mobile responsiveness */
+            @media (max-width: 768px) {
+                .faq-question {
+                    font-size: 1em;
+                }
+                .faq-answer {
+                    font-size: 0.9em;
+                }
+            }
+
+            .resource-section {
+                padding: 4em 0;
+                text-align: center;
+            }
+
+            .resource-grid {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2em;
+                justify-content: center;
+            }
+
+            .resource-box {
+                background: #16171e;
+                color: #fff;
+                padding: 2em;
+                border-radius: 1em;
+                flex: 1 1 250px;
+                max-width: 300px;
+                box-shadow: 0 0 15px rgba(0,0,0,0.3);
+                transition: transform 0.3s ease;
+            }
+
+            .resource-box:hover {
+                transform: translateY(-5px);
+            }
+
+            .resource-box h3 {
+                margin-top: 0;
+            }
+
+            .resource-box p {
+                font-size: 0.95em;
+                margin: 1em 0;
+            }
+        </style>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Put logo here</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="about-us.html">About Us</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="elements.html">Careers</a></li>
+							<li>
+								<a href="#">Discover</a>
+								<ul>
+									<li><a href="left-sidebar.html">Left Sidebar</a></li>
+									<li><a href="right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="no-sidebar.html">No Sidebar</a></li>
+									<li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option 1</a></li>
+											<li><a href="#">Option 2</a></li>
+											<li><a href="#">Option 3</a></li>
+											<li><a href="#">Option 4</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="contact-us.html" class="button primary">Contact Us</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Frequently Asked Questions</h2>
+							<p>Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan</p>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        <span class="icon">+</span> Hello 123
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>We offer lifeguard staffing, pool maintenance, pool construction, and inflatable experiences. For more details, feel free to contact us!</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        <span class="icon">+</span> How do I book your services?
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>You can <a href="contact-us.html">contact us</a> through the website or give us a call directly. We’ll provide a detailed quote based on your needs and schedule a service at your convenience.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        <span class="icon">+</span> Do you provide services in multiple locations?
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Yes, we offer our services across a wide range of locations. Contact us to find out if we operate in your area.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        <span class="icon">+</span> How can I make a payment?
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>O$P$ O$P$ O$P$ O$P$ O$P$ O$P$ O$P$</p>
+                                    </div>
+                                </div>
+							</section>
+                            
+                            <section id="resources" class="resource-section">
+                                <header class="major">
+                                    <h2>Downloadable Resources</h2>
+                                    <p>Grab handy tools, guides and checklists to make your pool safer and better managed.</p>
+                                </header>
+
+                                <div class="resource-grid">
+                                    <div class="resource-box">
+                                        <h3>Pool Safety Checklist</h3>
+                                        <p>Stay compliant and protect your guests with our easy-to-follow safety guide.</p>
+                                        <a href="#" class="button primary">Download PDF</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <h3>Inflatable Event Planner</h3>
+                                        <p>Plan your next poolside party or school event with this comprehensive planner.</p>
+                                        <a href="#" class="button primary">Download PDF</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <h3>Lifeguard Services Brochure</h3>
+                                        <p>Detailed info on our certified lifeguards and staffing solutions.</p>
+                                        <a href="#" class="button primary">Download PDF</a>
+                                    </div>
+                                </div>
+                            </section>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script>
+                // Toggle FAQ answers on click
+                document.querySelectorAll('.faq-question').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const faqItem = button.closest('.faq-item');
+                        faqItem.classList.toggle('open');
+                        
+                        const icon = button.querySelector('.icon');
+                        if (faqItem.classList.contains('open')) {
+                            icon.textContent = '-'; // Change to minus when open
+                        } else {
+                            icon.textContent = '+'; // Change to plus when closed
+                        }
+                    });
+                });
+            </script>
+	</body>
+</html>

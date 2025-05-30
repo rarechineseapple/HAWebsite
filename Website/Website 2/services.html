@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Services - Hydro Aquatic</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.modal {
+				display: none;
+				position: fixed;
+				z-index: 999;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				background: rgba(0, 0, 0, 0.8);
+			}
+
+			.modal-content {
+				background: #16171e; 
+				color: #ffffff;
+				margin: 5% auto;
+				padding: 2em;
+				width: 90%;
+				max-width: 800px;
+				border-radius: 1em;
+				position: relative;
+			}
+
+			.close {
+				position: absolute;
+				color: #222; /* Make sure it’s visible */
+				top: 1em;
+				right: 1em;
+				font-size: 2em;
+				cursor: pointer;
+			}
+
+			.modal-body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 2em;
+			}
+
+			.modal-image {
+				width: 100%;
+				max-width: 700px;
+				border-radius: 0.5em;
+			}
+
+			.modal-text {
+				width: 100%;
+			}
+
+			@keyframes modalFadeIn {
+				0% {
+					opacity: 0;
+					transform: scale(0.85);
+				}
+				100% {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+
+			.modal-content {
+				/* existing styles… */
+				animation: modalFadeIn 0.3s ease forwards;
+			}
+
+			@keyframes overlayFade {
+				from { opacity: 0; }
+				to { opacity: 1; }
+			}
+
+			.modal {
+				animation: overlayFade 0.3s ease;
+			}
+
+			@media (max-width: 600px) {
+				p {
+					display: none;
+				}
+
+				.modal-text h3 {
+					margin-bottom: 0.5em;
+				}
+			}
+		</style>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+			
+			<a 
+		href="https://wa.me/6592224040?text=Hi%20there!%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more." 
+		class="whatsapp-button" target="_blank">
+			<img src="images/whatsapp.png" alt="Chat on WhatsApp">
+		</a>
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Put logo here</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="about-us.html">About Us</a></li>
+							<li><a href="elements.html">Careers</a></li>
+							<li><a href="elements.html">Resources & FAQs</a></li>
+							<li><a href="contact-us.html" class="button primary">Contact Us</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					
+					<div class="container">
+						
+						<header class="major">
+							<h2>Our Services</h2>
+							<p>Reliable, professional, and tailored aquatic solutions for your facility.</p>
+						</header>
+
+						<!-- Content -->
+						<section class="wrapper style3 container special">
+
+							<div class="row">
+								<div class="col-6 col-12-narrower">
+									
+									<section>
+										<a href="javascript:void(0);" onclick="openModal('lifeguardModal')" class="image fit">
+											<img src="images/lifeguard1.jpg" alt="" />
+										</a>
+										<header>
+											<h3>Lifeguard Staffing</h3>
+										</header>
+										<p>We supply certified, experienced lifeguards for pools, aquatic centres, and special events. 
+											Our team is trained to uphold strict safety standards, ensuring a secure, well-managed 
+											swimming environment. 
+										</p>
+									</section>
+
+									<div id="lifeguardModal" class="modal">
+										<div class="modal-content">
+										  <span class="close" onclick="closeModal('lifeguardModal')">&times;</span>
+										  <div class="modal-body">
+											<img src="images/lifeguard1.jpg" alt="Lifeguard Staffing" class="modal-image">
+											<div class="modal-text">
+											  <h3>Lifeguard Staffing</h3>
+											  <ul>
+												<li>Certified Bronze Medallion Lifeguards – Ensuring professionalism and expertise</li>
+												<li>24/7 Staffing Options – Round-the-clock services to suit your schedule.</li>
+												<li>Proactive Safety Monitoring – Preventing issues before they arise.</li>
+												<li>Tailored staffing solutions based on your facility’s needs.</li>
+											  </ul>
+											</div>
+										  </div>
+										  <a href="contact-us.html" class="button primary">Guard Your Pool. Guard Your Reputation.</a>
+										</div>
+									  </div>
+
+								</div>
+								<div class="col-6 col-12-narrower">
+
+									<section>
+										<a href="javascript:void(0);" onclick="openModal('poolMaintainenceModal')" class="image fit">
+											<img src="images/poolmaintain1.jpg" alt="" />
+										</a>
+										<header>
+											<h3>Pool Maintenance</h3>
+										</header>
+										<p>Regular pool care is essential for both safety and aesthetics. We help clients avoid 
+											costly issues before they happen and keep their pools in pristine, 
+											swim-ready condition all year round.
+										</p>
+									</section>
+
+									<div id="poolMaintainenceModal" class="modal">
+										<div class="modal-content">
+										  <span class="close" onclick="closeModal('poolMaintainenceModal')">&times;</span>
+										  <div class="modal-body">
+											<img src="images/poolmaintain1.jpg" alt="Pool Maintenance" class="modal-image">
+											<div class="modal-text">
+											  <h3>Pool Maintenance</h3>
+											  <ul>
+												<li>Comprehensive Cleaning Services – Ensuring your pool is always ready to use.</li>
+												<li>Water Testing & Treatment – Keeping water safe and clean.</li>
+												<li>Custom Maintenance Schedules – Tailored to your pool’s needs and usage.</li>
+												<li>Equipment Inspections – Identifying problems early to save on repairs.</li>
+											  </ul>
+											</div>
+										  </div>
+										  <a href="contact-us.html" class="button primary">Get a Maintenance Quote</a>
+										</div>
+									  </div>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6 col-12-narrower">
+
+									<section>
+										<a href="javascript:void(0);" onclick="openModal('poolConstructionModal')" class="image fit">
+											<img src="images/lifeguard2.jpg" alt="" />
+										</a>
+										<header>
+											<h3>Pool Construction</h3>
+										</header>
+										<p>From concept to completion, we design and build pools tailored to your space, needs, 
+											and regulatory requirements. Every pool is built to meet the latest safety codes and 
+											client expectations.</p>
+									</section>
+
+									<div id="poolConstructionModal" class="modal">
+										<div class="modal-content">
+										  <span class="close" onclick="closeModal('poolConstructionModal')">&times;</span>
+										  <div class="modal-body">
+											<img src="images/lifeguard2.jpg" alt="Pool Construction" class="modal-image">
+											<div class="modal-text">
+											  <h3>Pool Construction</h3>
+											  <ul>
+												<li>Compliance with Local Safety Codes – Ensuring your pool meets all regulations.</li>
+												<li>Custom Pool Designs – Tailored to fit your space, budget, and preferences.</li>
+												<li>Energy-efficient Construction – Eco-friendly designs that save you money.</li>
+												<li>Full Installation & Maintenance Support – We handle it all from start to finish.</li>
+											  </ul>
+											</div>
+										  </div>
+										  <a href="contact-us.html" class="button primary">From Concept to Cannonball — Let’s Go</a>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-6 col-12-narrower">
+
+									<section>
+										<a href="javascript:void(0);" onclick="openModal('inflatableModal')" class="image fit">
+											<img src="images/pool1.jpg" alt="" />
+										</a>
+										<header>
+											<h3>Inflatable Experiences</h3>
+										</header>
+										<p>Make your next event unforgettable with our range of commercial-grade inflatables. 
+											From obstacle courses to giant slides, we offer professionally supervised inflatables, 
+											set up to industry safety standards.</p>
+									</section>
+
+									<div id="inflatableModal" class="modal">
+										<div class="modal-content">
+										  <span class="close" onclick="closeModal('inflatableModal')">&times;</span>
+										  <div class="modal-body">
+											<img src="images/pool1.jpg" alt="Pool Inflatable" class="modal-image">
+											<div class="modal-text">
+											  <h3>Pool Construction</h3>
+											  <ul>
+												<li>Perfect for Schools, Events, and Parties – Fun for all ages and group sizes.</li>
+												<li>Wide Variety of Inflatables – From obstacle courses to slides and more.</li>
+												<li>Professionally Supervised – Safety is our top priority with expert staff.</li>
+												<li>Easy Setup & Breakdown – Hassle-free service so you can focus on enjoying the event.</li>
+											  </ul>
+											</div>
+										  </div>
+										  <a href="contact-us.html" class="button primary">Unlock the Inflatable Experience</a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<a href="contact-us.html" class="button primary">Explore Your Options With Us</a>
+						</section>
+						
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.linkedin.com/company/hydro-aquatic-pte-ltd/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				function openModal(id) {
+					document.getElementById(id).style.display = "block";
+				}
+
+					function closeModal(id) {
+					document.getElementById(id).style.display = "none";
+				}
+
+				window.onclick = function(event) {
+					const modals = document.querySelectorAll(".modal");
+					modals.forEach(modal => {
+						if (event.target == modal) {
+						modal.style.display = "none";
+						}
+					});
+				}
+			</script>
+
+	</body>
+</html>
