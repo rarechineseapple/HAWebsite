@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>No Sidebar - Landed by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.contact-wrapper {
+				display: flex;
+				flex-wrap: wrap;
+				background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/contactus-bg.jpg') no-repeat center center fixed;
+				background-size: cover;
+				background-position: center;
+				background-attachment: fixed;
+				padding: 4em 2em;
+				color: #fff;
+				filter: grayscale(20%) brightness(0.8);
+			}
+
+			.contact-left, .contact-right {
+				flex: 1;
+				min-width: 300px;
+				padding: 2em;
+				background: rgba(22, 23, 30, 0.85); /* semi-transparent overlay for readability */
+				margin: 1em;
+				border-radius: 1em;
+			}
+
+			.contact-left h3 {
+				margin-top: 0;
+			}
+
+			/* Responsive adjustments */
+			@media (max-width: 768px) {
+				.contact-wrapper {
+					flex-direction: column;
+					background-attachment: scroll;
+				}
+			}
+			/* Testimonial Section */
+			.testimonials {
+				padding: 4rem 0;
+				background-color: #16171e;
+				text-align: center;
+			}
+
+			.testimonials header h2 {
+				font-size: 2rem;
+				font-weight: bold;
+				margin-bottom: 1rem;
+			}
+
+			.testimonials header p {
+				font-size: 1rem;
+				color: #fff;
+			}
+
+			.testimonial-slider {
+				position: relative;
+				max-width: 800px;
+				margin: 0 auto;
+			}
+
+			.testimonial {
+				display: none;
+				padding: 2rem;
+				background: #1f2027;
+				border-radius: 10px;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+				max-width: 350px;
+				margin: 0 auto;
+			}
+
+			.testimonial.active {
+				display: block;
+			}
+
+			.testimonial blockquote {
+				font-size: 1.1rem;
+				font-style: italic;
+				margin-bottom: 1rem;
+				color: #fff;
+			}
+
+			.testimonial cite {
+				font-size: 1rem;
+				font-weight: bold;
+				color: #fff;
+			}
+
+			.slider-buttons {
+				margin-top: 2rem;
+			}
+
+			.slider-buttons button {
+				background-color: #007bff;
+				color: white;
+				border: none;
+				padding: 10px 15px;
+				font-size: 1.2rem;
+				cursor: pointer;
+				border-radius: 5px;
+				margin: 0 10px;
+			}
+
+			.slider-buttons button:hover {
+				background-color: #0056b3;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+			<!--Whatsapp Button-->
+			<a 
+				href="https://wa.me/6592224040?text=Hi%20there!%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more." 
+				class="whatsapp-button" target="_blank">
+					<img src="images/whatsapp.png" alt="Chat on WhatsApp">
+			</a>
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Put logo here</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="about-us.html">About Us</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="elements.html">Careers</a></li>
+							<li><a href="faq-resources.html">Resources & FAQs</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="contact-wrapper">
+					<!-- Content -->
+					<div class="contact-left">
+						<h3>Get In Touch</h3>
+						<p>📞 +65 1234 5678</p>
+						<p>📧 hello@yourcompany.sg</p>
+						<p>📍 123 Poolside Lane, Singapore</p>
+						<p>🕐 Mon–Fri: 9am–6pm</p>
+						<header>
+							<h2>What Our Clients Are Saying</h2>
+							<p>Here's a look at how we've made a difference for our clients.</p>
+						</header>
+						<div class="testimonial-slider">
+							<div class="testimonial active">
+								<blockquote>
+									"The staff was professional, attentive, and made our pool a safe place for everyone. Highly recommended!"
+								</blockquote>
+								<cite>- John Doe, Pool Owner</cite>
+							</div>
+							<div class="testimonial">
+								<blockquote>
+									"Incredible service and expertise. They maintained our pool impeccably and were always available when needed."
+								</blockquote>
+								<cite>- Sarah Lee, Residential Pool Client</cite>
+							</div>
+							<div class="testimonial">
+								<blockquote>
+									"Thanks to their lifeguard staffing, we can focus on running our facility while they handle safety!"
+								</blockquote>
+								<cite>- Mark Williams, Facility Manager</cite>
+							</div>
+						</div>
+						<div class="slider-buttons">
+							<button class="prev">&#10094;</button>
+							<button class="next">&#10095;</button>
+						</div>
+					</div>
+
+					<div class="contact-right">
+						<header class="major">
+							<h2>Contact Us</h2>
+							<p>We believe great service starts with great communication. Submit your details below,  
+                                whether it’s for service inquiries, partnership opportunities, 
+                                or general questions. We look forward to hearing from you.</p>
+						</header>
+
+                        <section>
+                            <h3>Form</h3>
+                            <form method="post" action="#">
+                                <div class="row gtr-uniform gtr-50">
+                                    <div class="col-6 col-12-xsmall">
+                                        <input type="text" name="name" id="name" value="" placeholder="Name" />
+                                    </div>
+                                    <div class="col-6 col-12-xsmall">
+                                        <input type="email" name="email" id="email" value="" placeholder="Email" />
+                                    </div>
+									<div class="col-12-large">
+                                        <input type="tel" name="phone" id="phone" value="" placeholder="Phone Number" />
+                                    </div>
+                                    <div class="col-12">
+                                        <select name="category" id="category">
+                                            <option value="">- Category -</option>
+                                            <option value="1">Lifeguard Staffing</option>
+                                            <option value="2">Pool Maintenance</option>
+                                            <option value="3">Pool Construction</option>
+                                            <option value="4">Inflatables</option>
+											<option value="5">General Inquiry</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <ul class="actions">
+                                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                                            <li><input type="reset" value="Reset" /></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				// Get all the testimonial elements
+				const testimonials = document.querySelectorAll('.testimonial');
+				let currentTestimonial = 0; // Starting index of the testimonial
+
+				// Get the prev/next buttons
+				const prevButton = document.querySelector('.prev');
+				const nextButton = document.querySelector('.next');
+
+				// Function to show the current testimonial
+				function showTestimonial(index) {
+					// Hide all testimonials
+					testimonials.forEach((testimonial, i) => {
+						testimonial.classList.remove('active');
+					});
+
+					// Show the current testimonial
+					testimonials[index].classList.add('active');
+				}
+
+				// Event listener for the next button
+				nextButton.addEventListener('click', () => {
+					currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+					showTestimonial(currentTestimonial);
+				});
+
+				// Event listener for the prev button
+				prevButton.addEventListener('click', () => {
+					currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+					showTestimonial(currentTestimonial);
+				});
+
+				// Initial testimonial
+				showTestimonial(currentTestimonial);
+
+				// Auto-scroll functionality (every 5 seconds)
+				const autoScrollInterval = 5000; // Set interval time in milliseconds (5 seconds)
+				let autoScroll = setInterval(() => {
+					currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+					showTestimonial(currentTestimonial);
+				}, autoScrollInterval);
+
+				// Reset the auto-scroll interval when user clicks next or prev
+				nextButton.addEventListener('click', () => {
+					clearInterval(autoScroll); // Clear the existing interval
+					autoScroll = setInterval(() => {
+						currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+						showTestimonial(currentTestimonial);
+					}, autoScrollInterval); // Restart the interval
+				});
+
+				prevButton.addEventListener('click', () => {
+					clearInterval(autoScroll); // Clear the existing interval
+					autoScroll = setInterval(() => {
+						currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+						showTestimonial(currentTestimonial);
+					}, autoScrollInterval); // Restart the interval
+				});
+			</script>
+
+	</body>
+</html>

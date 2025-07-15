@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydro Aquatic | Professional Pool Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-swimming-pool text-3xl text-primary mr-2"></i>
+                <a href="index.html" class="text-2xl font-bold text-primary">Hydro Aquatic</a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-3">
+                <a href="index.html" class="nav-item active px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Home</a>
+                <a href="lifeguard.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Lifeguards</a>
+                <a href="eventnsup.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Operations</a>
+                <a href="maintenance.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Maintenance</a>
+                <a href="contactus.html" class="nav-item px-4 py-2 text-white bg-primary font-medium hover:bg-blue-700 rounded-md transition">Contact</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-3 px-4 bg-gray-50 rounded-md text-primary font-medium">Home</a>
+                <a href="lifeguard.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Lifeguards</a>
+                <a href="eventnsup.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Operations</a>
+                <a href="maintenance.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Maintenance</a>
+                <a href="contactus.html" class="block py-3 px-4 bg-primary text-white rounded-md text-center font-medium hover:bg-blue-700 transition">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <section id="home-page" class="page-section active">
+        <!-- WhatsApp Button -->
+        <a 
+		href="https://wa.me/6592224040?text=Hi%20there!%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more!" 
+		class="whatsapp-button" target="_blank">
+			<img src="assets/images/whatsapp.png" alt="Chat on WhatsApp">
+		</a>
+        <!-- Hero Section -->
+        <div class="hero-gradient text-white py-16 md:py-24">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Complete Aquatic Solutions</h1>
+                    <p class="text-xl mb-8">At Hydro Aquatic, we deliver tailored solutions to meet the needs of our clients, everything you need to keep your aquatic spaces operating at the highest standards of safety and enjoyment.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="lifeguard.html" class="bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition text-center">Get Started Today</a>
+                        <a href="contactus.html" class="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-primary transition text-center">Free Quote</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="assets/images/" alt="Professional pool service" class="rounded-lg shadow-2xl max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <section class="bg-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6 border-b-4 border-primary rounded-lg shadow-sm">
+                        <h3 class="text-5xl font-bold text-primary mb-2">15+</h3>
+                        <p class="text-gray-600 text-lg">Years of Experience</p>
+                    </div>
+                    <div class="p-6 border-b-4 border-primary rounded-lg shadow-sm">
+                        <h3 class="text-5xl font-bold text-primary mb-2">99.7%</h3>
+                        <p class="text-gray-600 text-lg">Customer Satisfaction Rate</p>
+                    </div>
+                    <div class="p-6 border-b-4 border-primary rounded-lg shadow-sm">
+                        <h3 class="text-5xl font-bold text-primary mb-2">20+</h3>
+                        <p class="text-gray-600 text-lg">Long Term Corporate Partnerships</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 page-title-underline">Our Services</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive pool and aquatic solutions designed for residential, commercial, and recreational spaces.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300 text-center">
+                        <div class="text-primary mb-4 mx-auto">
+                            <div class="bg-blue-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto">
+                                <i class="fas fa-user-shield text-4xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Lifeguard Staffing</h3>
+                        <p class="text-gray-600 mb-4">Certified, professional lifeguards for pools, beaches, and events</p>
+                        <ul class="mb-6 text-gray-600 space-y-2">
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Internationally Certified Lifeguards</span>
+                            </li>
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Flexible scheduling options</span>
+                            </li>
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Regularly assessed and refreshed with safety drills</span>
+                            </li>
+                        </ul>
+                        <a href="lifeguard.html" class="inline-block bg-primary text-white py-2 px-6 rounded-md hover:bg-blue-700 transition">Learn More</a>
+                    </div>
+                    
+                    <!-- Service Card 2 -->
+                    <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300 text-center">
+                        <div class="text-primary mb-4 mx-auto">
+                            <div class="bg-blue-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto">
+                                <i class="fas fa-hammer text-4xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Events and Support</h3>
+                        <p class="text-gray-600 mb-4">Specialized aquatic options that go beyond the basics to elevate your experience.</p>
+                        <ul class="mb-6 text-gray-600 space-y-2">
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Poolside equipment rental and sale</span>
+                            </li>
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Water safety coordination</span>
+                            </li>
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Everything you need for your pool</span>
+                            </li>
+                        </ul>
+                        <a href="eventnsup.html" class="nav-link inline-block bg-primary text-white py-2 px-6 rounded-md hover:bg-blue-700 transition">Work With Us</a>
+                    </div>
+                    
+                    <!-- Service Card 3 -->
+                    <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300 text-center">
+                        <div class="text-primary mb-4 mx-auto">
+                            <div class="bg-blue-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto">
+                                <i class="fas fa-broom text-4xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Pool Maintenance</h3>
+                        <p class="text-gray-600 mb-4">Keep your pool crystal clear all year round</p>
+                        <ul class="mb-6 text-gray-600 space-y-2">
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Weekly cleaning services</span>
+                            </li>
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Equipment repair & replacement</span>
+                            </li>
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Water testing & chemical balancing</span>
+                            </li>
+                        </ul>
+                        <a href="maintenance.html" class="nav-link inline-block bg-primary text-white py-2 px-6 rounded-md hover:bg-blue-700 transition">Maintenance Plans</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-16 bg-gradient-to-br from-white to-blue-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 page-title-underline">What Our Clients Say</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Trusted by clubs, hotels, and organizations across the nation</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Hydro Aquatic's lifeguards were professional and attentive during our community pool event. They handled a minor incident with such expertise that most guests didn't even notice."</p>
+                        <div class="flex items-center">
+                            <img src="assets/images/YGW.png" alt="Yeo Geok Wee" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Yeo Geok Wee</h4>
+                                <p class="text-gray-600 text-sm">Community Center Director</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Hydro Aquatic lifeguard team was professional, attentive, and quick to respond whenever needed. They created a safe and welcoming environment for all our guests, giving us peace of mind. Would definitely recommend their services."</p>
+                        <div class="flex items-center">
+                            <img src="assets/images/blank.png" alt="Mohd. Hidir" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Muhammad Hidir</h4>
+                                <p class="text-gray-600 text-sm">Club Management POC</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"The maintenance team solved our persistent algae problem that no one else could fix. They're prompt, professional, and reasonably priced. Our pool has never looked better."</p>
+                        <div class="flex items-center">
+                            <img src="assets/images/lisawang.png" alt="Lisa Wang" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Lisa Wang</h4>
+                                <p class="text-gray-600 text-sm">Homeowner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Dive In?</h2>
+                <p class="text-xl max-w-2xl mx-auto mb-8">Get a free consultation and quote for your project today. Our team of certified professionals is ready to bring your aquatic vision to life.</p>
+                <a href="https://wa.me/6592224040?text=Hi%20there!%20I%20found%20your%20website%20and%20would%20like%20to%20know%20more!" 
+                class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition inline-block">Schedule Consultation</a>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-swimming-pool text-3xl text-secondary mr-2"></i>
+                        <span class="text-2xl font-bold">Hydro Aquatic</span>
+                    </div>
+                    <p class="mb-4 text-gray-300">Professional aquatic solutions since 2008. Serving Singapore with certified lifeguards, premium maintenance services, aquatic events and logistics support.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="text-gray-300 hover:text-secondary transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-secondary transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-secondary transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-secondary transition">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-secondary pb-2">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="lifeguard.html" class="nav-link text-gray-300 hover:text-secondary transition">Lifeguard Staffing</a></li>
+                        <li><a href="eventnsup.html" class="nav-link text-gray-300 hover:text-secondary transition">Pool Construction</a></li>
+                        <li><a href="maintenance.html" class="nav-link text-gray-300 hover:text-secondary transition">Pool Maintenance</a></li>
+                        <li><a href="maintenance.html" class="nav-link text-gray-300 hover:text-secondary transition">Emergency Repairs</a></li>
+                        <li><a href="eventnsup.html" class="nav-link text-gray-300 hover:text-secondary transition">Custom Design</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-secondary pb-2">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Pool Safety Guide</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Construction Planning</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Maintenance Checklist</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Lifeguard Hiring Process</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Pool Chemistry Handbook</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-secondary pb-2">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">Subscribe for seasonal maintenance tips and special offers</p>
+                    <form>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address" class="px-4 py-3 rounded-l-lg w-full text-gray-700 focus:outline-none">
+                            <button class="bg-secondary text-white px-4 py-3 rounded-r-lg hover:bg-blue-400 transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">© 2025 Hydro Aquatic Solutions. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-300 hover:text-secondary transition text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-secondary transition text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-300 hover:text-secondary transition text-sm">Licensing</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydro Aquatic | Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-swimming-pool text-3xl text-primary mr-2"></i>
+                <a href="index.html" class="text-2xl font-bold text-primary">Hydro Aquatic</a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-3">
+                <a href="index.html" class="nav-item active px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Home</a>
+                <a href="lifeguard.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Lifeguards</a>
+                <a href="eventnsup.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Operations</a>
+                <a href="maintenance.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Maintenance</a>
+                <a href="contactus.html" class="nav-item px-4 py-2 text-white bg-primary font-medium hover:bg-blue-700 rounded-md transition">Contact</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-3 px-4 bg-gray-50 rounded-md text-primary font-medium">Home</a>
+                <a href="lifeguard.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Lifeguards</a>
+                <a href="eventnsup.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Operations</a>
+                <a href="maintenance.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Maintenance</a>
+                <a href="contactus.html" class="block py-3 px-4 bg-primary text-white rounded-md text-center font-medium hover:bg-blue-700 transition">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Page -->
+    <section id="contact-page" class="page">
+        <div class="container mx-auto px-4 py-12">
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 page-title-underline">Contact Us</h2>
+                <p class="text-gray-600 text-lg">Let's discuss how we can make your aquatic vision a reality</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Get in Touch</h3>
+                    
+                    <div class="space-y-8 mb-10">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Office Location</h4>
+                                <p class="text-gray-600">19 Woodlands Industrial Park E1, #03-10, Singapore 757719</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4 mt-1">
+                                <i class="fas fa-phone-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Contact Numbers</h4>
+                                <p class="text-gray-600">Main: +65 9222 4040</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4 mt-1">
+                                <i class="fas fa-envelope text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Email Us</h4>
+                                <p class="text-gray-600">info@hydroaquatic.com</p>
+                                <p class="text-gray-600">support@hydroaquatic.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4 mt-1">
+                                <i class="fas fa-clock text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Business Hours</h4>
+                                <p class="text-gray-600">Monday-Friday: 9am-5pm</p>
+                                <!--<p class="text-gray-600">Saturday: Emergency Services Only</p>
+                                <p class="text-gray-600">Sunday: Emergency Services Only</p>-->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 class="font-bold text-gray-800 mb-3">Service Areas</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm">Hougang</span>
+                        <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm">Tampines</span>
+                        <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm">Bukit Timah</span>
+                        <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm">Jurong</span>
+                        <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm">Nee Soon</span>
+                        <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm">All Around Singapore</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
+                    <form id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="name">Full Name *</label>
+                                <input type="text" id="name" required class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="email">Email *</label>
+                                <input type="email" id="email" required class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2" for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2" for="service">Interested In</label>
+                            <select id="service" required class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                <option value="">Select Service</option>
+                                <option value="lifeguard">Lifeguard Staffing</option>
+                                <option value="ops">Operational Matters</option>
+                                <option value="maintenance">Pool Maintenance</option>
+                                <option value="repair">Repair Service</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2" for="message">Message *</label>
+                            <textarea id="message" rows="5" required class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 px-8 rounded-lg hover:opacity-90 transition w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Our Location</h3>
+                <div class="bg-gray-200 h-96 rounded-xl overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.534010417031!2d103.79361247575285!3d1.453809961231236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da13149ce7af8b%3A0xb74fa270fdf72fa6!2s18%20Woodlands%20Industrial%20Park%20E1%2C%20Singapore%20757738!5e0!3m2!1sen!2sus!4v1748599436754!5m2!1sen!2sus" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-swimming-pool text-3xl text-secondary mr-2"></i>
+                        <span class="text-2xl font-bold">Hydro Aquatic</span>
+                    </div>
+                    <p class="mb-4 text-gray-300">Professional aquatic solutions since 2008. Serving Singapore with certified lifeguards, premium maintenance services, aquatic events and logistics support.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="text-gray-300 hover:text-secondary transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-secondary transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-secondary transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-secondary transition">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-secondary pb-2">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="lifeguard.html" class="nav-link text-gray-300 hover:text-secondary transition">Lifeguard Staffing</a></li>
+                        <li><a href="construction.html" class="nav-link text-gray-300 hover:text-secondary transition">Pool Construction</a></li>
+                        <li><a href="maintenance.html" class="nav-link text-gray-300 hover:text-secondary transition">Pool Maintenance</a></li>
+                        <li><a href="maintenance.html" class="nav-link text-gray-300 hover:text-secondary transition">Emergency Repairs</a></li>
+                        <li><a href="construction.html" class="nav-link text-gray-300 hover:text-secondary transition">Custom Design</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-secondary pb-2">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Pool Safety Guide</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Construction Planning</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Maintenance Checklist</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Lifeguard Hiring Process</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Pool Chemistry Handbook</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-secondary pb-2">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">Subscribe for seasonal maintenance tips and special offers</p>
+                    <form>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address" class="px-4 py-3 rounded-l-lg w-full text-gray-700 focus:outline-none">
+                            <button class="bg-secondary text-white px-4 py-3 rounded-r-lg hover:bg-blue-400 transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">© 2025 Hydro Aquatic Solutions. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-300 hover:text-secondary transition text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-secondary transition text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-300 hover:text-secondary transition text-sm">Licensing</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+	<script src="assets/js/main.js"></script>
+</body>
+</html>

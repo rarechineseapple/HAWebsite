@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvoVate | Business Transformation Specialists</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066f5',
+                        secondary: '#004abc',
+                        accent: '#38bdf8',
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                        teal: '#2dd4bf',
+                        purple: '#a855f7',
+                        success: '#10b981'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1.5s ease-out',
+                        'float': 'float 4s infinite ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: 0 },
+                            '100%': { opacity: 1 }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0066f5 0%, #004abc 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-7px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #38bdf8;
+            transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .service-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            font-size: 30px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stats-card {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .stats-card:hover .stat-icon {
+            transform: translateY(-5px) rotate(6deg);
+        }
+        
+        .stat-icon {
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        
+        .feature-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-image {
+            animation: float 6s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="bg-primary w-10 h-10 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-rocket text-white text-xl"></i>
+                        </div>
+                        <span class="ml-3 text-xl font-heading font-bold text-dark">EvoVate</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Home</a>
+                        <a href="#services" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Solutions</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">About</a>
+                        <a href="#results" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Results</a>
+                        <a href="#testimonials" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-base font-medium">Testimonials</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact" class="ml-8 inline-flex items-center px-5 py-2.5 rounded-xl shadow-md text-base font-medium text-white bg-primary hover:bg-secondary transition-all duration-300 transform hover:-translate-y-0.5">
+                        Start Transformation <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg fixed inset-x-0 top-16 z-50 rounded-b-xl">
+            <div class="px-5 pt-2 pb-4 space-y-1">
+                <a href="#home" class="block px-3 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Home</a>
+                <a href="#services" class="block px-3 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Solutions</a>
+                <a href="#about" class="block px-3 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">About</a>
+                <a href="#results" class="block px-3 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Results</a>
+                <a href="#testimonials" class="block px-3 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Testimonials</a>
+                <a href="#contact" class="block px-3 py-3 rounded-lg text-base font-medium text-white bg-primary hover:bg-secondary">Start Transformation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 gradient-bg text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-7 lg:text-left relative z-10">
+                    <h1 class="text-4xl tracking-tight font-heading font-bold sm:text-5xl md:text-6xl leading-tight">
+                        <span class="block">Transform Your Business</span>
+                        <span class="block mt-3 gradient-text">With Digital Innovation</span>
+                    </h1>
+                    <p class="mt-5 text-lg text-blue-100 sm:mt-6 sm:text-xl md:mt-6 md:text-xl lg:mx-0 max-w-2xl">
+                        We empower businesses to reach their full potential through cutting-edge technology solutions and strategic growth planning.
+                    </p>
+                    <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="#contact" class="px-8 py-4 border border-transparent text-base font-medium rounded-xl shadow-lg text-primary bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center justify-center">
+                                Start Your Journey <i class="fas fa-arrow-right ml-3"></i>
+                            </a>
+                            <a href="#services" class="px-8 py-4 border-2 border-blue-300 text-base font-medium rounded-xl text-white bg-transparent hover:bg-blue-500/20 md:py-4 md:text-lg md:px-10 transition-all duration-300 inline-flex items-center justify-center">
+                                <i class="fas fa-play-circle mr-3"></i> Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10 flex flex-wrap gap-4">
+                        <div class="flex items-center bg-blue-500/20 rounded-full px-4 py-2">
+                            <div class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-primary">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span class="ml-3 font-medium">No Setup Fees</span>
+                        </div>
+                        <div class="flex items-center bg-blue-500/20 rounded-full px-4 py-2">
+                            <div class="h-10 w-10 rounded-full bg-white flex items-center justify-center text-primary">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span class="ml-3 font-medium">24/7 Support</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-5 lg:flex lg:items-center">
+                    <div class="relative mx-auto w-full rounded-3xl overflow-hidden hero-image">
+                        <div class="relative block w-full rounded-2xl overflow-hidden glass-card p-1">
+                            <div class="bg-white/10 backdrop-blur-lg rounded-xl p-4">
+                                <div class="rounded-xl overflow-hidden shadow-xl">
+                                    <div class="h-6 bg-gray-200 flex items-center px-3">
+                                        <div class="w-2 h-2 rounded-full bg-red-500 mr-2"></div>
+                                        <div class="w-2 h-2 rounded-full bg-yellow-500 mr-2"></div>
+                                        <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                    </div>
+                                    <div class="h-80 bg-gradient-to-br from-teal-50 to-blue-50 relative overflow-hidden">
+                                        <div class="absolute top-8 left-8 w-16 h-16 rounded-2xl bg-blue-500 flex items-center justify-center text-white text-2xl">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                        <div class="absolute top-8 right-8 w-16 h-16 rounded-2xl bg-purple-500 flex items-center justify-center text-white text-2xl">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div class="absolute bottom-8 left-8 w-16 h-16 rounded-2xl bg-teal-500 flex items-center justify-center text-white text-2xl">
+                                            <i class="fas fa-bolt"></i>
+                                        </div>
+                                        <div class="absolute bottom-8 right-8 w-16 h-16 rounded-2xl bg-pink-500 flex items-center justify-center text-white text-2xl">
+                                            <i class="fas fa-globe"></i>
+                                        </div>
+                                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 flex items-center justify-center text-white text-4xl">
+                                            <i class="fas fa-rocket"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating elements -->
+        <div class="absolute top-10 left-5 w-4 h-4 rounded-full bg-teal-400/30 animate-pulse"></div>
+        <div class="absolute top-20 right-10 w-6 h-6 rounded-full bg-purple-400/30 animate-pulse"></div>
+        <div class="absolute bottom-20 left-10 w-8 h-8 rounded-full bg-blue-400/30 animate-pulse"></div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-8">Trusted by innovative companies worldwide</p>
+                <div class="flex flex-wrap justify-center gap-12 md:gap-16">
+                    <div class="opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="h-8 flex items-center">
+                            <span class="text-xl font-bold text-dark">TechCrunch</span>
+                        </div>
+                    </div>
+                    <div class="opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="h-8 flex items-center">
+                            <span class="text-xl font-bold text-dark">Forbes</span>
+                        </div>
+                    </div>
+                    <div class="opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="h-8 flex items-center">
+                            <span class="text-xl font-bold text-dark">Google</span>
+                        </div>
+                    </div>
+                    <div class="opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="h-8 flex items-center">
+                            <span class="text-xl font-bold text-dark">Microsoft</span>
+                        </div>
+                    </div>
+                    <div class="opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="h-8 flex items-center">
+                            <span class="text-xl font-bold text-dark">Amazon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-16">
+                <span class="inline-block mb-3 text-sm px-4 py-1 bg-primary/10 text-primary rounded-full font-medium">Our Solutions</span>
+                <h2 class="text-3xl font-heading font-bold text-gray-900 sm:text-4xl">
+                    Accelerate Your Business Growth
+                </h2>
+                <p class="mt-4 max-w-2xl text-lg text-gray-600 lg:mx-auto">
+                    Discover our tailored solutions designed to drive innovation, efficiency, and sustainable growth for your business.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Solution 1 -->
+                <div class="card-hover bg-white p-8 rounded-2xl">
+                    <div class="service-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Digital Transformation</h3>
+                    <p class="text-gray-600 mb-6">
+                        Leverage cutting-edge technology to modernize operations, enhance customer experience, and drive innovation across your organization.
+                    </p>
+                    <div class="flex items-center text-primary font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="card-hover bg-white p-8 rounded-2xl">
+                    <div class="service-icon bg-purple-100 text-purple-600">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">AI & Automation</h3>
+                    <p class="text-gray-600 mb-6">
+                        Implement intelligent automation solutions that reduce costs, improve accuracy, and free your team to focus on strategic initiatives.
+                    </p>
+                    <div class="flex items-center text-primary font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="card-hover bg-white p-8 rounded-2xl">
+                    <div class="service-icon bg-teal-100 text-teal-600">
+                        <i class="fas fa-chart-network"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Strategic Consulting</h3>
+                    <p class="text-gray-600 mb-6">
+                        Access our expertise to develop a clear roadmap for growth, identify opportunities, and overcome business challenges.
+                    </p>
+                    <div class="flex items-center text-primary font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-primary text-base font-medium rounded-full text-primary hover:text-white hover:bg-primary transition-all duration-300">
+                    View All Solutions <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="stats-card bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-7">
+                            <div class="stat-icon text-4xl text-blue-500 mb-5">
+                                <i class="fas fa-arrow-trend-up"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">68%</h3>
+                            <p class="text-gray-600">Average Revenue Growth</p>
+                        </div>
+                        <div class="stats-card bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-7">
+                            <div class="stat-icon text-4xl text-purple-500 mb-5">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">45%</h3>
+                            <p class="text-gray-600">Process Efficiency Gain</p>
+                        </div>
+                        <div class="stats-card bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-7">
+                            <div class="stat-icon text-4xl text-teal-500 mb-5">
+                                <i class="fas fa-sack-dollar"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">3.8x</h3>
+                            <p class="text-gray-600">Average ROI</p>
+                        </div>
+                        <div class="stats-card bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-7">
+                            <div class="stat-icon text-4xl text-primary mb-5">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">92%</h3>
+                            <p class="text-gray-600">Client Retention Rate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 mt-12 lg:mt-0">
+                    <span class="inline-block mb-3 text-sm px-4 py-1 bg-blue-100 text-primary rounded-full font-medium">Measurable Results</span>
+                    <h2 class="text-3xl font-heading font-bold text-gray-900 sm:text-4xl mb-6">
+                        Delivering Exceptional Business Outcomes
+                    </h2>
+                    <p class="text-gray-600 mb-6">
+                        Our data-driven approach ensures tangible results that transform businesses and create lasting competitive advantages.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-6 w-6 rounded-md bg-green-100 text-green-600">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                            </div>
+                            <p class="ml-3 font-medium text-gray-800">Performance-driven solutions tailored to your business</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-6 w-6 rounded-md bg-green-100 text-green-600">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                            </div>
+                            <p class="ml-3 font-medium text-gray-800">Transparent reporting with measurable KPIs</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-6 w-6 rounded-md bg-green-100 text-green-600">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                            </div>
+                            <p class="ml-3 font-medium text-gray-800">Continuous optimization for sustained growth</p>
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <a href="#" class="inline-flex items-center text-primary font-semibold group">
+                            View case studies
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block mb-3 text-sm px-4 py-1 bg-white text-primary rounded-full font-medium">Testimonials</span>
+                <h2 class="text-3xl font-heading font-bold text-gray-900 sm:text-4xl mb-4">
+                    What Our Clients Say
+                </h2>
+                <p class="max-w-2xl mx-auto text-gray-600">
+                    Don't just take our word for it. Here's what clients have to say about working with us.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-14 w-14 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">SJ</div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900">Sarah Johnson</h4>
+                            <p class="text-primary font-medium">CEO, Innovatech Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "Working with EvoVate was transformative. Their digital strategy helped us increase revenue by 75% in just 9 months while reducing operational costs."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-14 w-14 rounded-full bg-teal-500 flex items-center justify-center text-white font-bold">MR</div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900">Michael Rodriguez</h4>
+                            <p class="text-primary font-medium">CTO, GlobalTech Inc.</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "The AI solutions implemented by EvoVate automated 60% of our repetitive tasks, allowing our team to focus on strategic innovation."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-14 w-14 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold">EC</div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900">Emma Chen</h4>
+                            <p class="text-primary font-medium">Director, Growth Ventures</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "Their strategic guidance helped us pivot during a challenging market period, resulting in a 120% increase in customer acquisition."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-heading font-bold text-white sm:text-4xl mb-6">
+                Ready to Transform Your Business?
+            </h2>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto mb-10">
+                Schedule a free consultation with our experts to discover how we can help you achieve your business goals.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg shadow-lg transition-all hover:shadow-xl hover:bg-gray-50">
+                    Schedule a Consultation
+                </a>
+                <a href="#" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all hover:bg-white/10">
+                    <i class="fas fa-calendar-alt mr-2"></i> View Calendar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center">
+                        <div class="bg-primary w-10 h-10 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-rocket text-white text-xl"></i>
+                        </div>
+                        <span class="ml-3 text-xl font-heading font-bold">EvoVate</span>
+                    </div>
+                    <p class="mt-6 text-gray-400 max-w-xs">
+                        Transforming businesses through innovation, technology, and strategic excellence.
+                    </p>
+                    <div class="flex mt-6 space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Solutions</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Digital Transformation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">AI & Automation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Strategic Consulting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cloud Migration</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Data Analytics</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                            <span>123 Innovation Ave, San Francisco, CA 94103</span>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-phone mt-1 mr-3 text-primary"></i>
+                            <span>+1 (800) 123-4567</span>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-envelope mt-1 mr-3 text-primary"></i>
+                            <span>info@evovate.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-16 pt-10 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">&copy; 2023 EvoVate. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="text-gray-500 hover:text-white text-sm">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-white text-sm">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-white text-sm">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('block');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('mobile-menu-button');
+            
+            if (!menu.contains(event.target) && !button.contains(event.target) && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
