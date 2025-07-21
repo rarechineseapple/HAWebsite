@@ -20,9 +20,19 @@
             <!-- Desktop Navigation -->
             <div class="hidden md:flex space-x-3">
                 <a href="index.html" class="nav-item active px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Home</a>
-                <a href="lifeguard.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Lifeguards</a>
-                <a href="eventnsup.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Operations</a>
-                <a href="maintenance.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Maintenance</a>
+                <div class="relative inline-block group" id="dropdown">
+                    <button id="dropdownBtn" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">
+                        Services
+                    </button>
+                    <div id="dropdownMenu" class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity absolute w-48 bg-gray-50 rounded-lg shadow-lg z-50">
+                        <a href="lifeguard.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 hover:text-gray-900">Lifeguards</a>
+                        <a href="maintenance.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 hover:text-gray-900">Pool Maintenance</a>
+                        <a href="supply.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 hover:text-gray-900">Pool Supply</a>
+                    </div>
+                </div>
+                <a href="aboutus.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">About Us</a>
+                <a href="careers.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Careers</a>
+                <a href="faq.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">FAQ</a>
                 <a href="contactus.html" class="nav-item px-4 py-2 text-white bg-primary font-medium hover:bg-blue-700 rounded-md transition">Contact</a>
             </div>
             
@@ -36,9 +46,19 @@
         <div id="mobile-menu" class="mobile-menu md:hidden bg-white">
             <div class="px-4 py-2 space-y-2">
                 <a href="index.html" class="block py-3 px-4 bg-gray-50 rounded-md text-primary font-medium">Home</a>
-                <a href="lifeguard.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Lifeguards</a>
-                <a href="eventnsup.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Operations</a>
-                <a href="maintenance.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Maintenance</a>
+                <div class="relative inline-block group" id="dropdown">
+                    <button id="dropdownBtn" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">
+                        Services
+                    </button>
+                    <div id="dropdownMenu" class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity absolute w-48 bg-gray-50 rounded-lg shadow-lg z-50">
+                        <a href="lifeguard.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 hover:text-gray-900">Lifeguards</a>
+                        <a href="maintenance.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 hover:text-gray-900">Pool Maintenance</a>
+                        <a href="supply.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 hover:text-gray-900">Pool Supply</a>
+                    </div>
+                </div>
+                <a href="aboutus.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">About Us</a>
+                <a href="careers.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Careers</a>
+                <a href="faq.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">faq</a>
                 <a href="contactus.html" class="block py-3 px-4 bg-primary text-white rounded-md text-center font-medium hover:bg-blue-700 transition">Contact Us</a>
             </div>
         </div>
@@ -163,7 +183,7 @@
     </section>
 
     <!-- Footer -->
-     <footer class="bg-dark text-white pt-12 pb-8">
+    <footer class="bg-dark text-white pt-12 pb-8">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
                 <div>
@@ -189,13 +209,13 @@
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-bold mb-4 border-b border-secondary pb-2">Services</h4>
+                    <h4 class="text-lg font-bold mb-4 border-b border-secondary pb-2">Links</h4>
                     <ul class="space-y-2">
                         <li><a href="lifeguard.html" class="nav-link text-gray-300 hover:text-secondary transition">Lifeguard Staffing</a></li>
-                        <li><a href="eventnsup.html" class="nav-link text-gray-300 hover:text-secondary transition">Operations</a></li>
                         <li><a href="maintenance.html" class="nav-link text-gray-300 hover:text-secondary transition">Pool Maintenance</a></li>
-                        <li><a href="maintenance.html" class="nav-link text-gray-300 hover:text-secondary transition">Emergency Repairs</a></li>
-                        <li><a href="eventnsup.html" class="nav-link text-gray-300 hover:text-secondary transition">Opportunites</a></li>
+                        <li><a href="supply.html" class="nav-link text-gray-300 hover:text-secondary transition">Pool Supply</a></li>
+                        <li><a href="careers.html" class="nav-link text-gray-300 hover:text-secondary transition">Careers</a></li>
+                        <li><a href="faq.html" class="nav-link text-gray-300 hover:text-secondary transition">FAQ</a></li>
                     </ul>
                 </div>
                 
@@ -225,7 +245,7 @@
             </div>
             
             <div class="pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-300 text-sm">© 2025 Hydro Aquatic. All rights reserved.</p>
+                <p class="text-gray-300 text-sm">© 2025 Hydro Aquatic Solutions. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
                     <a href="#" class="text-gray-300 hover:text-secondary transition text-sm">Privacy Policy</a>
                     <a href="#" class="text-gray-300 hover:text-secondary transition text-sm">Terms of Service</a>

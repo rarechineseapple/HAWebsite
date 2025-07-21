@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
@@ -20,9 +21,19 @@
             <!-- Desktop Navigation -->
             <div class="hidden md:flex space-x-3">
                 <a href="index.html" class="nav-item active px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Home</a>
-                <a href="lifeguard.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Lifeguards</a>
-                <a href="eventnsup.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Operations</a>
-                <a href="maintenance.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Maintenance</a>
+                <div class="relative inline-block group" id="dropdown">
+                    <button id="dropdownBtn" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">
+                        Services
+                    </button>
+                    <div id="dropdownMenu" class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity absolute w-48 bg-gray-50 rounded-lg shadow-lg z-50">
+                        <a href="lifeguard.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 hover:text-gray-900">Lifeguards</a>
+                        <a href="maintenance.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 hover:text-gray-900">Pool Maintenance</a>
+                        <a href="supply.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 hover:text-gray-900">Pool Supply</a>
+                    </div>
+                </div>
+                <a href="aboutus.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">About Us</a>
+                <a href="careers.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">Careers</a>
+                <a href="faq.html" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">FAQ</a>
                 <a href="contactus.html" class="nav-item px-4 py-2 text-white bg-primary font-medium hover:bg-blue-700 rounded-md transition">Contact</a>
             </div>
             
@@ -36,9 +47,19 @@
         <div id="mobile-menu" class="mobile-menu md:hidden bg-white">
             <div class="px-4 py-2 space-y-2">
                 <a href="index.html" class="block py-3 px-4 bg-gray-50 rounded-md text-primary font-medium">Home</a>
-                <a href="lifeguard.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Lifeguards</a>
-                <a href="eventnsup.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Operations</a>
-                <a href="maintenance.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Maintenance</a>
+                <div class="relative inline-block group" id="dropdown">
+                    <button id="dropdownBtn" class="nav-item px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md transition">
+                        Services
+                    </button>
+                    <div id="dropdownMenu" class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity absolute w-48 bg-gray-50 rounded-lg shadow-lg z-50">
+                        <a href="lifeguard.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 hover:text-gray-900">Lifeguards</a>
+                        <a href="maintenance.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 hover:text-gray-900">Pool Maintenance</a>
+                        <a href="supply.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-200 hover:text-gray-900">Pool Supply</a>
+                    </div>
+                </div>
+                <a href="aboutus.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">About Us</a>
+                <a href="careers.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">Careers</a>
+                <a href="faq.html" class="block py-3 px-4 bg-gray-50 rounded-md text-gray-700 font-medium">faq</a>
                 <a href="contactus.html" class="block py-3 px-4 bg-primary text-white rounded-md text-center font-medium hover:bg-blue-700 transition">Contact Us</a>
             </div>
         </div>
@@ -46,119 +67,151 @@
 
     <!-- Contact Page -->
     <section id="contact-page" class="page">
-        <div class="container mx-auto px-4 py-12">
-            <div class="mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 page-title-underline">Contact Us</h2>
-                <p class="text-gray-600 text-lg">Let's discuss how we can make your aquatic vision a reality</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Get in Touch</h3>
-                    
-                    <div class="space-y-8 mb-10">
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4 mt-1">
-                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-1">Office Location</h4>
-                                <p class="text-gray-600">19 Woodlands Industrial Park E1, #03-10, Singapore 757719</p>
-                            </div>
+        <div class="hero-image" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/images/bgpic1.jpg');">
+                <div class="hero-text">
+                    <h2>Hydro Aquatic</h2>
+                    <p>Let's discuss how we can make your aquatic vision a reality</p>
+                </div>
+        </div>
+        <div class="container mx-auto px-4 py-12"> 
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Get in Touch</h3>
+                <div class="space-y-8 mb-10">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4 mt-1">
+                            <i class="fas fa-map-marker-alt text-primary text-xl"></i>
                         </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4 mt-1">
-                                <i class="fas fa-phone-alt text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-1">Contact Numbers</h4>
-                                <p class="text-gray-600">Main: +65 9222 4040</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4 mt-1">
-                                <i class="fas fa-envelope text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-1">Email Us</h4>
-                                <p class="text-gray-600">info@hydroaquatic.com</p>
-                                <p class="text-gray-600">support@hydroaquatic.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4 mt-1">
-                                <i class="fas fa-clock text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-1">Business Hours</h4>
-                                <p class="text-gray-600">Monday-Friday: 9am-5pm</p>
-                                <!--<p class="text-gray-600">Saturday: Emergency Services Only</p>
-                                <p class="text-gray-600">Sunday: Emergency Services Only</p>-->
-                            </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">Office Location</h4>
+                            <p class="text-gray-600">19 Woodlands Industrial Park E1, #03-10, Singapore 757719</p>
                         </div>
                     </div>
                     
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4 mt-1">
+                            <i class="fas fa-phone-alt text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">Contact Numbers</h4>
+                            <p class="text-gray-600">Main: +65 9222 4040</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4 mt-1">
+                            <i class="fas fa-envelope text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">Email Us</h4>
+                            <p class="text-gray-600">info@hydroaquatic.com</p>
+                            <p class="text-gray-600">support@hydroaquatic.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4 mt-1">
+                            <i class="fas fa-clock text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">Business Hours</h4>
+                            <p class="text-gray-600">Monday-Friday: 9am - 12:30pm | 1:30pm - 5:00 pm</p>
+                        </div>
+                    </div>
+                
                     <h4 class="font-bold text-gray-800 mb-3">Service Areas</h4>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm">Hougang</span>
-                        <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm">Tampines</span>
-                        <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm">Bukit Timah</span>
-                        <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm">Jurong</span>
-                        <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm">Nee Soon</span>
                         <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-sm">All Around Singapore</span>
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl shadow-md p-8">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
-                    <form id="contact-form">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label class="block text-gray-700 mb-2" for="name">Full Name *</label>
-                                <input type="text" id="name" required class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 mb-2" for="email">Email *</label>
-                                <input type="email" id="email" required class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-                            </div>
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
+                    <div class="flex flex-col justify-between bg-white rounded-xl shadow-md p-8">
+                        <div class="container mx-auto px-4">
+                            <h2 class="section-title" id="contact_us_title">How can we <strong>help?</strong></h2>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-7xl mx-auto" aria-labelledby="contact_us_title">
+                                <li class="contact-card bg-white p-6 rounded-lg shadow text-center">
+                                    <a href="faq.html" onclick="openHelpWidget(); return false;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-blue-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 11-12.728 0M12 13v.01M12 17h.01" />
+                                    </svg>
+                                    <h3>I need help!</h3>
+                                    </a>
+                                </li>
+                                <li class="contact-card bg-white p-6 rounded-lg shadow text-center">
+                                    <a href="https://wa.me/6592224040?text=Hi%20there!%20I%20have%20a%20business%20proposal,%20let's%20work%20together!">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-blue-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    <h3>I have a business proposal.</h3>
+                                    </a>
+                                </li>
+                                <li class="contact-card bg-white p-6 rounded-lg shadow text-center">
+                                    <a href="https://wa.me/6592224040?text=Hi%20there!%20I%20have%20some%20general%20feedback%20to%20share.">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-blue-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
+                                    </svg>
+                                    <h3>General Feedback</h3>
+                                    </a>
+                                </li>
+                                <li class="contact-card bg-white p-6 rounded-lg shadow text-center">
+                                    <a href="https://wa.me/6592224040?text=Hi%20there!%20I%20have%20a%20some%20concerns.">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-blue-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                                    </svg>
+                                    <h3>I have other concerns.</h3>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        
-                        <div class="mb-6">
-                            <label class="block text-gray-700 mb-2" for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label class="block text-gray-700 mb-2" for="service">Interested In</label>
-                            <select id="service" required class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-                                <option value="">Select Service</option>
-                                <option value="lifeguard">Lifeguard Staffing</option>
-                                <option value="ops">Operational Matters</option>
-                                <option value="maintenance">Pool Maintenance</option>
-                                <option value="repair">Repair Service</option>
-                                <option value="other">Other Inquiry</option>
-                            </select>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label class="block text-gray-700 mb-2" for="message">Message *</label>
-                            <textarea id="message" rows="5" required class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 px-8 rounded-lg hover:opacity-90 transition w-full">Send Message</button>
-                    </form>
-                </div>
-            </div>
+                    </div>
 
-            <div>
+                    <div class="flex flex-col justify-between bg-white rounded-xl shadow-md p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
+                        <form id="contact-form">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-gray-700 mb-2" for="name">Full Name *</label>
+                                    <input type="text" id="name" required class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2" for="email">Email *</label>
+                                    <input type="email" id="email" required class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2" for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2" for="service">Interested In</label>
+                                <select id="service" required class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="">Select Service</option>
+                                    <option value="lifeguard">Lifeguard Staffing</option>
+                                    <option value="ops">Operational Matters</option>
+                                    <option value="maintenance">Pool Maintenance</option>
+                                    <option value="repair">Repair Service</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2" for="message">Message *</label>
+                                <textarea id="message" rows="5" required class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 px-8 rounded-lg hover:opacity-90 transition w-full">Send Message</button>
+                        </form>
+                    </div> 
+                </div>
+                
+            <div class="mt-12">
                 <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Our Location</h3>
                 <div class="bg-gray-200 h-96 rounded-xl overflow-hidden">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.534010417031!2d103.79361247575285!3d1.453809961231236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da13149ce7af8b%3A0xb74fa270fdf72fa6!2s18%20Woodlands%20Industrial%20Park%20E1%2C%20Singapore%20757738!5e0!3m2!1sen!2sus!4v1748599436754!5m2!1sen!2sus" 
-                        width="600" 
-                        height="450" 
+                        width= 100% 
+                        height= 100% 
                         style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" 
@@ -195,13 +248,13 @@
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-bold mb-4 border-b border-secondary pb-2">Services</h4>
+                    <h4 class="text-lg font-bold mb-4 border-b border-secondary pb-2">Links</h4>
                     <ul class="space-y-2">
                         <li><a href="lifeguard.html" class="nav-link text-gray-300 hover:text-secondary transition">Lifeguard Staffing</a></li>
-                        <li><a href="construction.html" class="nav-link text-gray-300 hover:text-secondary transition">Pool Construction</a></li>
                         <li><a href="maintenance.html" class="nav-link text-gray-300 hover:text-secondary transition">Pool Maintenance</a></li>
-                        <li><a href="maintenance.html" class="nav-link text-gray-300 hover:text-secondary transition">Emergency Repairs</a></li>
-                        <li><a href="construction.html" class="nav-link text-gray-300 hover:text-secondary transition">Custom Design</a></li>
+                        <li><a href="supply.html" class="nav-link text-gray-300 hover:text-secondary transition">Pool Supply</a></li>
+                        <li><a href="careers.html" class="nav-link text-gray-300 hover:text-secondary transition">Careers</a></li>
+                        <li><a href="faq.html" class="nav-link text-gray-300 hover:text-secondary transition">FAQ</a></li>
                     </ul>
                 </div>
                 
